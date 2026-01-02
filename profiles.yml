@@ -1,0 +1,10 @@
+olist_project:
+  outputs:
+    dev:
+      type: duckdb
+      path: '../data/olist.duckdb'
+      extensions:
+        - icu
+        - parquet
+      threads: 1
+  target: dev
