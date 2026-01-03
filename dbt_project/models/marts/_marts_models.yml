@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Fact table containing consolidated metrics per order, including financial values ​​and deadlines"
+    columns:
+      - name: order_id
+        description: "Primary key of the request"
+        tests:
+          - unique
+          - not_null
+      - name: total_order_amount
+        description: "Total order value (sum of products + shipping)"
+        tests:
+          - not_null
